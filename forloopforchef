@@ -1,0 +1,4 @@
+for i in ${cat ips}
+do 
+knife bootstrap $i -X ec2-user -i newkeypair.pem -N  $i -Y --sudo
+done
