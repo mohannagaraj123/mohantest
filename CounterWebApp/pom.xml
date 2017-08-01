@@ -21,6 +21,8 @@
                     </configuration>
                 </plugin>
 </plugins>
+    <finalName>CounterWebApp</finalName>
+
 </build>
 
   <dependencies>
@@ -31,7 +33,4 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-  <build>
-    <finalName>CounterWebApp</finalName>
-  </build>
 </project>
