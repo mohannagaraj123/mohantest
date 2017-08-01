@@ -61,7 +61,7 @@ Also show cases the 'Simple Logging Framework - slf4j'.</description>
     <repository>
       <id>internal.repo</id>
       <name>MyCo Internal Repository</name>
-      <url>Host to Company Repository</url>
+      <url>http://35.160.142.22:8080</url>
     </repository>
   </distributionManagement>
 
