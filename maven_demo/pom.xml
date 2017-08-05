@@ -21,16 +21,18 @@
 
   <build>
     <finalName>maven_demo</finalName>
+<plugins>
  <plugin>
           <groupId>org.apache.tomcat.maven</groupId>
           <artifactId>tomcat7-maven-plugin</artifactId>
           <version>2.2</version>
           <configuration>
-         <url>http://192.168.10.145/manager</url>
+         <url>http://http://52.42.120.49:8080/manager/html</url>
           <server>tomcat</server>
-          <path>/{project.arttifactid}</path>
+          <path>/webapps</path>
            </configuration>
 
   </plugin>
+</plugins>
   </build>
 </project>
