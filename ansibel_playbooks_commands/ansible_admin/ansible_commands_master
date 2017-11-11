@@ -1,0 +1,63 @@
+    1  ls -la
+    2  exit
+    3  ls -la
+    4  ssh ansible_admin@172.31.30.217
+    5  ssh ansible_admin@ec2-35-162-21-142.us-west-2.compute.amazonaws.com
+    6  ansible all --list-hosts
+    7  ansible demo --list-hosts
+    8  ansible 172.31.30.217 --list-hosts
+    9  ansible 172.31.30.218 --list-hosts
+   10  ansible demo -a "ls /etc/hosts"
+   11  ansible demo -a "ls /etc/
+   12  ansible demo -a "ls /etc"
+   13  ansible demo -s -a "yum install wget"
+   14  ansible demo -s -a "yum install -y wget "
+   15  ansible demo -s -a "yum install -y git "
+   16  ansible demo -s -a "yum install -y httpd "
+   17  ansible demo -m ping 
+   18  ping 172.31.30.217
+   19  yum install ping
+   20  sudo yum install ping
+   21  ping 
+   22  ping 172.31.30.217
+   23  history > ansible_commands
+   24  ls
+   25  cat ansible_commands 
+   26  cd
+   27  ls
+   28  rm ansible_commands 
+   29  ls
+   30  history > ansible_commands
+   31  ansible demo -m copy -a "src=~/ansible_commands dest=~/ansible_commands""
+   32  ansible demo -m copy -a "src=~/ansible_commands dest=~/ansible_commands"
+   33  ssh ansible_admin@172.31.30.217
+   34  pwd
+   35  exit
+   36  ansible demo -s -m copy -a "src=~/ansible_commands dest=/root/ansible_commands"
+   37  ssh ansible_admin@172.31.30.217
+   38  ssh root@172.31.30.217
+   39  ls
+   40  rm ansible_commands 
+   41  ks
+   42  ls
+   43  ansible demo:local  -s -m yum -a "pkg=httpd state=presemt"  
+   44  ansible all  -s -m yum -a "pkg=httpd state=presemt"  
+   45  ansible demo -s -m yum -a "pkg=httpd state=presemt"  
+   46  ansible demo:local -s -m yum -a "pkg=httpd state=present"  
+   47  ansible demo:local -s -m yum -a "pkg=httpd state=latest"  
+   48  ansible demo:local -s -m yum -a "pkg=httpd state=abscent"  
+   49  ansible demo:local -s -m yum -a "pkg=httpd state=absent"  
+   50  ansible demo:local -s -m yum -a "pkg=httpd state=present"  
+   51  ansible demo:local -s -m service -a "name=httpd state=stopped"  
+   52  ansible demo:local -s -m service -a "name=httpd state=started"  
+   53  ansible all -s -a "service status httpd"
+   54  ansible all -s -a "systemctl httpd status"
+   55  ansible demo:local -s -m yum -a "pkg=httpd state=present"  
+   56  ansible demo:local -s -m service -a "name=httpd state=started"  
+   57  ansible all -s -a "systemctl httpd status"
+   58  ansible all -s -a "systemctl status httpd"
+   59  ansible all -s -m user -a "name=mohan state=present"
+   60  ansible all -s -m user -a "name=mohan state=absent"
+   61  ansible all -s -m user -a "name=mohan state=present"
+   62  ls
+   63  history > ansible_commands_master
