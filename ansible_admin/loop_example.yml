@@ -1,0 +1,13 @@
+--- # loop example 
+- hosts: local 
+  user: ansible_admin
+  sudo: yes
+  connection: ssh
+  tasks:
+  - name: echo a line
+    raw: cat /var/log/messages | grep login > /root/logininfo
+  - name: add the users
+    user: name={{ item }} state=present
+    with_items:
+    - mohan
+    - admin

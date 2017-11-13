@@ -1,0 +1,15 @@
+--- # tags example
+- hosts: local
+  user: ansible_admin
+  sudo: yes
+  connection: ssh
+  tasks:
+    - name: first name
+      raw: echo "mohan" > /home/ansible_admin/adminnames
+      tags:
+        - admins
+    - name: checklog 
+      raw: cat /root/log_info > /home/ansible_admin/logs
+      tags:
+        - checklog
+

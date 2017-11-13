@@ -1,0 +1,15 @@
+--- # condition example
+- hosts: all
+  user: ansible_admin
+  sudo: yes
+  connection: ssh
+  tasks:
+   - name: install httpd on redhat paltform
+     condition: yum install -y httpd 
+     when: ansible_os_family == "Redhat"
+   - name: install appache2 on debian family
+     apt-get: pkg=appache2 state=installed
+     when: ansible_os_family == "Debian" 
+
+   
+   

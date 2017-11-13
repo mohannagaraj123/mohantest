@@ -1,0 +1,24 @@
+--- # Install nginx
+- hosts: all
+  user: ansible_admin
+  sudo: yes
+  connection: ssh
+  gather_facts: no
+  vars_prompt:
+  - name: package
+    prompt: Enter the package ti install  
+
+  tasks:
+  - name: check the var log
+    raw: cat /var/log/messages > /root/log_info 
+  - name: install package
+    yum: pkg='{{ package }}' state=installed
+    async: 200
+    poll: 5
+    run_once: true
+    delegate_to: localhost
+    notify: startrestart package
+  handlers:
+    - name: startrestart package
+      action: service name='{{ package }}' state=restarted
+
