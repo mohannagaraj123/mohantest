@@ -5,9 +5,7 @@
   sudo: yes   #yes or no
   gather_facts: no # yes or no
   tasks:
-    - name: install the appache server 
-      action: yum name=httpd state=installed
-      notify: restart httpd
+    - include: task_includefile.yml
     - name: install the git server
       yum: pkg=git state=installed
     - name: install git
