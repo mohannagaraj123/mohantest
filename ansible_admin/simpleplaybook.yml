@@ -1,5 +1,5 @@
 --- # Install nginx
-- hosts: all
+- hosts: local 
   user: ansible_admin
   sudo: yes
   connection: ssh
