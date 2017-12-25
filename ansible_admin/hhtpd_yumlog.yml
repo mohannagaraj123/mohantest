@@ -1,0 +1,17 @@
+--- # Httpd and yum playbook
+- hosts: demo
+  user: ansible_admin
+  connection: ssh
+  sudo: yes   #yes or no
+  gather_facts: no # yes or no
+  tasks:
+    - include: task_includefile.yml
+    - name: install the git server
+      yum: pkg=git state=installed
+    - name: install git
+      raw: yum list installed > /root/installed_packages.log
+   
+  
+  handlers:
+      - name: restart httpd
+        action: service name=httpd state=restarted

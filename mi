@@ -1,0 +1,4 @@
+fir i in $(mi)
+do 
+cat mi
+done

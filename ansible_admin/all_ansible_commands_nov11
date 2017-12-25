@@ -1,0 +1,76 @@
+    1  ls -la
+    2  exit
+    3  ls -la
+    4  ssh ansible_admin@172.31.30.217
+    5  ssh ansible_admin@ec2-35-162-21-142.us-west-2.compute.amazonaws.com
+    6  ansible all --list-hosts
+    7  ansible demo --list-hosts
+    8  ansible 172.31.30.217 --list-hosts
+    9  ansible 172.31.30.218 --list-hosts
+   10  ansible demo -a "ls /etc/hosts"
+   11  ansible demo -a "ls /etc/
+   12  ansible demo -a "ls /etc"
+   13  ansible demo -s -a "yum install wget"
+   14  ansible demo -s -a "yum install -y wget "
+   15  ansible demo -s -a "yum install -y git "
+   16  ansible demo -s -a "yum install -y httpd "
+   17  ansible demo -m ping 
+   18  ping 172.31.30.217
+   19  yum install ping
+   20  sudo yum install ping
+   21  ping 
+   22  ping 172.31.30.217
+   23  history > ansible_commands
+   24  ls
+   25  cat ansible_commands 
+   26  cd
+   27  ls
+   28  rm ansible_commands 
+   29  ls
+   30  history > ansible_commands
+   31  ansible demo -m copy -a "src=~/ansible_commands dest=~/ansible_commands""
+   32  ansible demo -m copy -a "src=~/ansible_commands dest=~/ansible_commands"
+   33  ssh ansible_admin@172.31.30.217
+   34  pwd
+   35  exit
+   36  ls -la
+   37  cd .ssh/
+   38  ls
+   39  vi known_hosts 
+   40  cd
+   41  ssh-keygen
+   42  ssh-copy-id ansible_admin@172.31.30.217
+   43  ssh ansible_admin@172.31.30.217
+   44  ssh-copy-id ansible_admin@localhost
+   45  ssh ansible_admin@localhost
+   46  ssh ansible_admin@host1ansible
+   47  ssh ansible_admin@172.31.30.217
+   48  cd
+   49  ls
+   50  crontab -l
+   51  clear
+   52  ansible demo -s -m cron -a "name='copyhistory' minute='3' hour='13' job='cp ~/ansi
+   53  ls
+   54  ansible demo -s -m cron -a "name='copyhistory' minute='3' hour='13' job='cp ~/ansible_commands_master
+   55  ansible demo -s -m cron -a "name='copyhistory' hour='13' job='~/ansible
+   56  ls
+   57  vi ansib
+   58  ansible_commands_master >> ansib
+   59  cp ansible_commands_master >> ansib
+   60  cat ansible_commands_master  >> ansib
+   61  ls
+   62  vi ansib
+   63  ansible demo -s -m cron -a "name='copyhistory' hour='13' job='cat ~/ansible_commands >> /root/ansible_commands'"
+   64  crontab -l
+   65  exit
+   66  ansible demo -s -m cron -a "name='copyhistory' hour='13' job='cat ~/ansible_commands >> /root/ansible_commands'"
+   67  ansible all -m setup
+   68  ansible all -m setup -a "filter=ipv4"
+   69  ansible all -m setup -a "filter=*ipv4*"
+   70  touch ip_details
+   71  ansible all -m setup -a "filter=*ipv4*" > ip_details
+   72  cat ip_details 
+   73  ansible all -m setup -a "filter=ansible_domain"
+   74  exit
+   75  ls
+   76  history >> all_ansible_commands_nov11

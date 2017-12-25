@@ -1,0 +1,7 @@
+ansible demo -m cron -a "name='backup' minute='10' hour='30' job='mkdir hai'"
+ansible all -m yum -a "pkg=httpd state=present"
+ansible all -m setup
+ansible all -m setup -a "filter=ipv4"
+ansible all -m service -a "name=httpd state=present"
+ansible demo -m copy -a "src=~/ansible/commands dest=/root/hello"
+ansible demo -s -m user -a "name=mohan"

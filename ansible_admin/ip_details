@@ -1,0 +1,42 @@
+localhost | SUCCESS => {
+    "ansible_facts": {
+        "ansible_all_ipv4_addresses": [
+            "172.31.27.57"
+        ], 
+        "ansible_default_ipv4": {
+            "address": "172.31.27.57", 
+            "alias": "eth0", 
+            "broadcast": "172.31.31.255", 
+            "gateway": "172.31.16.1", 
+            "interface": "eth0", 
+            "macaddress": "02:c5:ca:b0:78:2a", 
+            "mtu": 9001, 
+            "netmask": "255.255.240.0", 
+            "network": "172.31.16.0", 
+            "type": "ether"
+        }
+    }, 
+    "changed": false, 
+    "failed": false
+}
+172.31.30.217 | SUCCESS => {
+    "ansible_facts": {
+        "ansible_all_ipv4_addresses": [
+            "172.31.30.217"
+        ], 
+        "ansible_default_ipv4": {
+            "address": "172.31.30.217", 
+            "alias": "eth0", 
+            "broadcast": "172.31.31.255", 
+            "gateway": "172.31.16.1", 
+            "interface": "eth0", 
+            "macaddress": "02:34:79:c9:1d:70", 
+            "mtu": 9001, 
+            "netmask": "255.255.240.0", 
+            "network": "172.31.16.0", 
+            "type": "ether"
+        }
+    }, 
+    "changed": false, 
+    "failed": false
+}

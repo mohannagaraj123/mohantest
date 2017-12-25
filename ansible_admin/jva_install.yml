@@ -1,0 +1,22 @@
+--- # Java Installation
+- hosts: all
+  user: ansible_admin
+  sudo: yes
+  connection: ssh
+  gather_facts: yes
+  vars_prompt:
+    - name: application
+      prompt: enter package to install
+
+  tasks:
+    - name: install java
+      yum: pkg='{{ application }}' state=installed
+      notify: start or restart service java
+    - name: install telnet
+      yum: pkg=telnet state=latest
+
+
+
+ 
+ 
+  
